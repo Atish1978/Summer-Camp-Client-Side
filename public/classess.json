@@ -1,0 +1,90 @@
+[
+    {
+        "_id": "642c155b2c4774f05c36eeaa",
+        "sportsImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2022/05/pexels-rodnae-productions-8224684-scaled.jpg?resize=1536%2C1024&ssl=1",
+        "sportsName": "Tennis",
+        "instructorName": "John Doe",
+        "instructorEmail": "john.doe@gmail.com",
+        "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2021/04/unnamed.jpg?w=750&ssl=1",
+        "availableSeats": 20,
+        "studentsNumber": 10,
+        "price": 50
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb9",
+        "sportsImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2022/05/pexels-kampus-production-8941640-scaled.jpg?resize=1536%2C1024&ssl=1",
+        "sportsName": "Football",
+        "instructorName": "Jane Smith",
+        "instructorEmail": "jane.smith@gmail.com",
+        "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2023/02/Vikram-Sir-2048x2048-1.jpg?resize=1536%2C1536&ssl=1",
+        "availableSeats": 15,
+        "studentsNumber": 8,
+        "price": 40
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7c",
+        "sportsImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2022/05/pexels-patrick-case-3602833-scaled.jpg?resize=1536%2C1024&ssl=1",
+        "sportsName": "Cricket",
+        "instructorName": "Bob Johnson",
+        "instructorEmail": "bob.johnson@gmail.com",
+        "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2023/02/photo12.jpg?resize=1536%2C1536&ssl=1",
+        "availableSeats": 12,
+        "studentsNumber": 6,
+        "price": 60
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee88",
+        "sportsImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2022/05/pexels-rodnae-productions-7104234-scaled.jpg?resize=1536%2C1024&ssl=1",
+        "sportsName": "Frisbee",
+        "instructorName": "Sarah Lee",
+        "instructorEmail": "sarah.lee@gmail.com",
+        "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2022/08/UM.jpg?resize=1395%2C1536&ssl=1",
+        "availableSeats": 8,
+        "studentsNumber": 4,
+        "price": 80
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7a",
+        "sportsImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2022/05/kids-trekking.jpeg?w=1024&ssl=1",
+        "sportsName": "Hiking",
+        "instructorName": "Tom Jones",
+        "instructorEmail": "tom.jones@gmail.com",
+        "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2021/10/Anup-Coach-2-scaled.jpg?resize=1536%2C1536&ssl=1",
+        "availableSeats": 25,
+        "studentsNumber": 15,
+        "price": 70
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8c",
+        "sportsImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2022/05/pexels-pavel-danilyuk-5807684-scaled.jpg?resize=1536%2C1025&ssl=1",
+        "sportsName": "Cycling",
+        "instructorName": "Kelly Brown",
+        "instructorEmail": "kelly.brown@gmail.com",
+        "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2021/09/Moonmi-Boruah-1-scaled.jpg?resize=1536%2C1025&ssl=1",
+        "availableSeats": 18,
+        "studentsNumber": 12,
+        "price": 45
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee94",
+        "sportsImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2022/05/pexels-jim-de-ramos-1263348-scaled.jpg?resize=1536%2C1024&ssl=1",
+        "sportsName": "Swimming",
+        "instructorName": "Mike Davis",
+        "instructorEmail": "mike.davis@gmail.com",
+        "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2021/09/Sampath-Krishna-scaled.jpg?resize=1536%2C1077&ssl=1",
+        "availableSeats": 20,
+        "studentsNumber": 10,
+        "price": 50
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9e",
+        "sportsImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2022/05/1280-471740317-children-playing-badminton.jpg?w=1280&ssl=1",
+        "sportsName": "Badminton",
+        "instructorName": "Emily Green",
+        "instructorEmail": "emily.green@gmail.com",
+        "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2022/07/Screenshot-362.png?w=975&ssl=1",
+        "availableSeats": 14,
+        "studentsNumber": 8,
+        "price": 55
+    }
+]

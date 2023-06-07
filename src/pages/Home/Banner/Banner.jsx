@@ -14,31 +14,50 @@ const Banner = () => {
     return (
         <div>
             <Carousel>
-                <div>
+                <div className='relative'>
                     <img src={img1} />
+                    <div className='absolute flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515]'>
+                        <h1 className='text-6xl font-bold text-white text-center ms-10'>Summer Sports for Kids</h1>
+                    </div>
                 </div>
-                <div>
+                <div className='relative'>
                     <img src={img2} />
+                    <div className='absolute flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515]'>
+                        <h1 className='text-6xl font-bold text-white text-center ms-10'>Summer Sports for Kids</h1>
+                    </div>
                 </div>
-                <div>
+                <div className='relative'>
                     <img src={img3} />
+                    <div className='absolute flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515]'>
+                        <h1 className='text-6xl font-bold text-white text-center ms-10'>Summer Sports for Kids</h1>
+                    </div>
                 </div>
-                <div>
+                <div className='relative'>
                     <img src={img4} />
-                </div>
-                <div>
+                    <div className='absolute flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515]'>
+                        <h1 className='text-6xl font-bold text-white text-center ms-10'>Summer Sports for Kids</h1>
+                    </div>
+                </div >
+                <div className='relative'>
                     <img src={img5} />
+                    <div className='absolute flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515]'>
+                        <h1 className='text-6xl font-bold text-white text-center ms-10'>Summer Sports for Kids</h1>
+                    </div>
                 </div>
-                <div>
+                <div className='relative'>
                     <img src={img6} />
+                    <div className='absolute flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515]'>
+                        <h1 className='text-6xl font-bold text-white text-center ms-10'>Summer Sports for Kids</h1>
+                    </div>
                 </div>
-                <div>
+                <div className='relative'>
                     <img src={img7} />
+                    <div className='absolute flex items-center h-full left-0 top-0 bg-gradient-to-r from-[#151515]'>
+                        <h1 className='text-6xl font-bold text-white text-center ms-10'>Summer Sports for Kids</h1>
+                    </div>
                 </div>
             </Carousel>
-            <div className='z-0'>
-                <h1 className='text-xl z-10'>Summer Sports for Kids</h1>
-            </div>
+
         </div>
     );
 };
