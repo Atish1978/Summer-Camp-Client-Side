@@ -5,7 +5,7 @@
         "sportsName": "Tennis",
         "instructorName": "John Doe",
         "instructorEmail": "john.doe@gmail.com",
-        "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2021/04/unnamed.jpg?w=750&ssl=1",
+        "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2023/02/Picture1-1.jpg?resize=1536%2C1536&ssl=1",
         "availableSeats": 20,
         "studentsNumber": 10,
         "price": 50
@@ -60,7 +60,7 @@
         "sportsName": "Cycling",
         "instructorName": "Kelly Brown",
         "instructorEmail": "kelly.brown@gmail.com",
-        "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2021/09/Moonmi-Boruah-1-scaled.jpg?resize=1536%2C1025&ssl=1",
+        "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2021/10/Vikram-Sir-scaled.jpg?resize=1536%2C1536&ssl=1",
         "availableSeats": 18,
         "studentsNumber": 12,
         "price": 45
@@ -71,7 +71,7 @@
         "sportsName": "Swimming",
         "instructorName": "Mike Davis",
         "instructorEmail": "mike.davis@gmail.com",
-        "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2021/09/Sampath-Krishna-scaled.jpg?resize=1536%2C1077&ssl=1",
+        "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2023/02/Picture2.jpg?resize=1536%2C1536&ssl=1",
         "availableSeats": 20,
         "studentsNumber": 10,
         "price": 50

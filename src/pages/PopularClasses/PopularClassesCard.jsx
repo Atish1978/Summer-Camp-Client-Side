@@ -1,7 +1,7 @@
 
 
 const PopularClassesCard = ({pclass}) => {
-    const {_id, sportsImage, sportsName, studentsNumber, availableSeats}=pclass;
+    const {sportsImage, sportsName, studentsNumber}=pclass;
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
@@ -9,10 +9,8 @@ const PopularClassesCard = ({pclass}) => {
             </figure>
             <div className="card-body">
                 <h2 className="card-title">{sportsName}</h2>
-               
-                <div className="card-actions">
-                   <button className="btn btn-primary">View Details</button>
-                </div>
+                <h2 className="text-xl mt-2 text-left">Number of Students: {studentsNumber}</h2>
+            
             </div>
         </div>
     );

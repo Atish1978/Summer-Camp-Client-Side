@@ -10,11 +10,11 @@ const PopularClasses = () => {
         fetch('classes.json')
         .then(res=>res.json())
         .then(data=>{
-            SetClasses(data);
+            SetClasses(data.slice(0, 6));
         })
     } , [])
     return (
-        <div className="mt-4">
+        <div className="my-6">
         <div className="text-center">
             <h3 className='text-5xl'>Popular Classes</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-4">
