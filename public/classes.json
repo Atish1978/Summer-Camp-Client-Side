@@ -28,8 +28,8 @@
         "instructorName": "Bob Johnson",
         "instructorEmail": "bob.johnson@gmail.com",
         "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2023/02/photo12.jpg?resize=1536%2C1536&ssl=1",
-        "availableSeats": 12,
-        "studentsNumber": 6,
+        "availableSeats": 30,
+        "studentsNumber": 15,
         "price": 60
     },
     {
@@ -39,8 +39,8 @@
         "instructorName": "Sarah Lee",
         "instructorEmail": "sarah.lee@gmail.com",
         "instructorImage": "https://i0.wp.com/thesportsschool.com/wp-content/uploads/2022/08/UM.jpg?resize=1395%2C1536&ssl=1",
-        "availableSeats": 8,
-        "studentsNumber": 4,
+        "availableSeats": 25,
+        "studentsNumber": 13,
         "price": 80
     },
     {

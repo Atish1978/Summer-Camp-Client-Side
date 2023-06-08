@@ -25,7 +25,7 @@ const NavBar = () => {
             <div className="navbar-center flex-auto">
                 <ul className="menu menu-horizontal px-1 flex gap-8">
                     <Link to='/'><li>Home</li></Link> 
-                    <li>Instructors</li>
+                    <Link to='/instructors'><li>Instructors</li></Link>
                     <li>Classes</li>
                     <li>Dashboard</li>
                  
