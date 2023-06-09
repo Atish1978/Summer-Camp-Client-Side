@@ -2,24 +2,25 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProviders";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import app from "../../firebase/firebase.config";
+// import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import Swal from 'sweetalert2'
+// import app from "../../firebase/firebase.config";
 
 
-const auth = getAuth(app);
+// const auth = getAuth(app);
 const Login = () => {
 
     const { signIn, signInWithGoogle} = useContext(AuthContext);
 
     const [user, setUser] = useState(null);
-    const [error, setError] = useState('');
-    const [success, setSuccess] = useState('');
+    // const [error, setError] = useState('');
+    // const [success, setSuccess] = useState('');
     const navigate=useNavigate();
     const location=useLocation();
     console.log(user);
    
     
-    const from=location.state?.from?.pathname || '/';
+    const from = location.state?.from?.pathname || "/";
     
 
       const handleLogin = (event) => {
@@ -33,24 +34,34 @@ const Login = () => {
         .then(result=>{
             const user=result.user;
             console.log(user);
+            Swal.fire({
+              title: 'User Login Successful.',
+              showClass: {
+                  popup: 'animate__animated animate__fadeInDown'
+              },
+              hideClass: {
+                  popup: 'animate__animated animate__fadeOutUp'
+              }
+          });
+            navigate(from, { replace: true });
         })
         .catch(error=>console.log(error));
 
-        setError('');
-        setSuccess('');
+        // setError('');
+        // setSuccess('');
 
          // SignIn with Email:
-    signInWithEmailAndPassword(auth, email, password)
-    .then(result => {
-      const loggedUser = result.user;
-      console.log(loggedUser);
-      setUser(loggedUser);
-      setSuccess('User login successful.');
-      setError('');
-    })
-    .catch(error => {
-      setError(error.message);
-    })
+    // signInWithEmailAndPassword(auth, email, password)
+    // .then(result => {
+    //   const loggedUser = result.user;
+    //   console.log(loggedUser);
+    //   setUser(loggedUser);
+    //   setSuccess('User login successful.');
+    //   setError('');
+    // })
+    // .catch(error => {
+    //   setError(error.message);
+    // })
 }
 
 
@@ -96,8 +107,8 @@ const Login = () => {
                 </div>
             </form>
             <p className='my-4 text-center'>New to This Site? Please  <Link className='text-orange-600 font-bold' to='/signup'>Sign Up</Link></p>
-            <p className='text-danger'>{error}</p>
-      <p className='text-success'>{success}</p>
+            {/* <p className='text-danger'>{error}</p>
+      <p className='text-success'>{success}</p> */}
         </div>
     );
 };

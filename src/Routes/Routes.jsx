@@ -8,6 +8,7 @@ import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import Instructors from "../pages/Instructors/Instructors";
 import ClassesAll from "../pages/ClassesAll/ClassesAll";
+// import SignUpNew from "../pages/SignUp/SignUpNew";
 
   export const router = createBrowserRouter([
     {
@@ -34,6 +35,10 @@ import ClassesAll from "../pages/ClassesAll/ClassesAll";
           path: '/classes',
           element: <ClassesAll></ClassesAll>
         }
+        // {
+        //   path: '/signupnew',
+        //   element: <SignUpNew></SignUpNew>
+        // }
       ]
     },
   ]);

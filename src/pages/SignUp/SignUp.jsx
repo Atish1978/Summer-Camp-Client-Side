@@ -1,9 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProviders";
 
 
 const SignUp = () => {
+    const [error, setError]=useState('');
+    const [user, setUser]=useState('');
 
     const {createUser}=useContext(AuthContext);
 
@@ -14,18 +16,44 @@ const SignUp = () => {
             const name=form.name.value;
             const email=form.email.value;
             const password=form.password.value;
+            const confirm=form.confirm.value;
             const photo=form.photo.value;
-            const newValue={name, email, password, photo}
+            const newValue={name, email, password, photo, confirm}
             console.log(newValue);
+            if (!/(?=.*[A-Z])/.test(password)){
+                setError('Please add at least one Upper Case.');
+                return
+            }
+            else if (!/(?=.*[@$!%*#?&])/.test(password)){
+                setError('Please add a Special Character.');
+                return
+            }
+
+            else if (password.length<6){
+                setError('Password must be 6 characters.')
+                return
+            }
+            setError('');
+            setUser('');
+            if(password!==confirm){
+                setError('Your password did not match');
+                return;
+            }
+            else if(password.length<6){
+                setError('Password must have at least 6 character');
+                return;
+            }
 
             createUser(email, password)
-        .then(result => {
-            const user = result.user;
-            console.log(user)
-          })
-          .catch((error) => {
-            console.log(error)
-          });
+        .then(result=>{
+            const loggedUser=result.user;
+            console.log(loggedUser);
+            setUser(loggedUser);
+        })
+        .catch(error=>{
+            console.log(error);
+            setError(error.message);
+        })
     }
     return (
         <div className="card-body">
@@ -51,6 +79,12 @@ const SignUp = () => {
                 </div>
                 <div className="form-control">
                     <label className="label">
+                        <span className="label-text mb-2">Confirm Password</span>
+                    </label>
+                    <input type="password" name='confirm' placeholder="password" className="input input-bordered" required/>
+                </div>
+                <div className="form-control">
+                    <label className="label">
                         <span className="label-text mb-2">Photo URL</span>
                     </label>
                     <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered" />
@@ -61,6 +95,8 @@ const SignUp = () => {
                 </div>
             </form>
             <p className='my-4 text-center'>Already have an account?  <Link className='text-orange-600 font-bold' to='/login'>login</Link></p>
+            <p className='text-error text-center'>{error}</p>
+           
         </div>
     );
 };

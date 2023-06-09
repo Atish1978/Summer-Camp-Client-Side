@@ -2,7 +2,7 @@
 
 
 const InstructorAllCard = ({instructor}) => {
-    const {instructorImage, instructorName, sportsName, studentsNumber}=instructor;
+    const {instructorImage, instructorName, sportsName, instructorEmail, studentsNumber}=instructor;
 
  
     return (
@@ -13,6 +13,7 @@ const InstructorAllCard = ({instructor}) => {
             <div className="card-body">
                 <h2 className="text-3xl text-center">{instructorName}</h2>
                 <h2 className="text-2xl mt-2 text-center">{sportsName}</h2>
+                <h2 className="text-xl mt-2 text-center">Email: {instructorEmail}</h2>
                 <h2 className="text-xl mt-2 text-center">Number of Students: {studentsNumber}</h2>
             </div>
         </div>
