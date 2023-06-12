@@ -9,8 +9,8 @@ import useAdmin from "../../../hooks/useAdmin";
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [isAdmin] = useAdmin();
-  const [cart] = useCart();
+  // const [isAdmin] = useAdmin();
+  const [selectedclass] = useCart();
 
 
 
@@ -37,15 +37,15 @@ const NavBar = () => {
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/instructors'>Instructors</Link></li>
           <li><Link to='/classes'>Classes</Link></li>
-          {
+          {/* {
             isAdmin ? <li><Link to="/dashboard/adminhome">Dashboard</Link></li> :
               <li><Link to="/dashboard/userhome">Dashboard</Link></li>
-          }
+          } */}
           <li>
             <Link to="/dashboard/mycart">
               <button className="btn">
                 <FaShoppingCart></FaShoppingCart>
-                <div className="badge badge-success">+{cart?.length || 0}</div>
+                <div className="badge badge-success">+{selectedclass?.length || 0}</div>
               </button>
             </Link>
           </li>

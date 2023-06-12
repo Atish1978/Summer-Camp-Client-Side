@@ -8,7 +8,7 @@ const useCart = () => {
         queryKey: ['selectedclass', user?.email],
         queryFn: async () => {
             const res = await fetch(`http://localhost:5000/selectedclass?email=${user?.email}`)
-            return res.data;
+            return res.json();
         },
     })
 
