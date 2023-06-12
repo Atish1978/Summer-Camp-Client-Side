@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const MyCart = () => {
     const [selectedclass, refetch] = useCart();
     console.log(selectedclass);
-    // how does reduce work!!!
+  
     const total = selectedclass.reduce((sum, item) => item.price + sum, 0);
 
     const handleDelete = item => {
@@ -21,7 +21,7 @@ const MyCart = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/${item._id}`, {
+                fetch(`http://localhost:5000/selectedclass/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -40,7 +40,7 @@ const MyCart = () => {
     }
 
     return (
-        <div className="w-full">
+        <div className="w-full mt-12">
             {/* <Helmet>
                 <title>Bistro Boss | My Cart</title>
             </Helmet> */}
@@ -59,6 +59,7 @@ const MyCart = () => {
                             <th>SL</th>
                             <th>Image</th>
                             <th>Class Name</th>
+                            <th>Available Seats</th>
                             <th>Price</th>
                             <th>Action</th>
                         </tr>
@@ -81,7 +82,8 @@ const MyCart = () => {
                                 <td>
                                     {item.sportsName}
                                 </td>
-                                <td className="">${item.price}</td>
+                                <td className="ps-10">{item.availableSeats}</td>
+                                <td className="ps-6">${item.price}</td>
                                 <td>
                                     <button onClick={() => handleDelete(item)} className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button>
                                 </td>
