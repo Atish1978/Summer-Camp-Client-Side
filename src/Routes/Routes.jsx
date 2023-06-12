@@ -8,7 +8,11 @@ import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import Instructors from "../pages/Instructors/Instructors";
 import ClassesAll from "../pages/ClassesAll/ClassesAll";
-// import SignUpNew from "../pages/SignUp/SignUpNew";
+import Dashboard from "../Layout/Dashboard";
+import UserHome from "../pages/Dashboard/UserHome/UserHome";
+import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
+import MyCart from "../pages/Dashboard/MyCart/MyCart";
+
 
   export const router = createBrowserRouter([
     {
@@ -35,10 +39,27 @@ import ClassesAll from "../pages/ClassesAll/ClassesAll";
           path: '/classes',
           element: <ClassesAll></ClassesAll>
         }
-        // {
-        //   path: '/signupnew',
-        //   element: <SignUpNew></SignUpNew>
-        // }
+       
       ]
     },
+    {
+      path: 'dashboard',
+      element: <Dashboard></Dashboard>,
+      children: [
+        {
+          path: 'userhome',
+          element: <UserHome></UserHome>
+        },
+        {
+          path: 'adminhome',
+          element: <AdminHome></AdminHome>
+        },
+        {
+          path: 'mycart',
+          element: <MyCart></MyCart>
+        }
+      
+      
+      ]
+    }
   ]);

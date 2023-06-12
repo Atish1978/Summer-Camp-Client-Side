@@ -1,13 +1,17 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProviders";
+import Swal from 'sweetalert2'
 
 
 const SignUp = () => {
+    
     const [error, setError]=useState('');
     const [user, setUser]=useState('');
 
     const {createUser}=useContext(AuthContext);
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || "/";
 
 
     const handleSignUp=(event)=>{
@@ -33,27 +37,47 @@ const SignUp = () => {
                 setError('Password must be 6 characters.')
                 return
             }
-            setError('');
-            setUser('');
+     
             if(password!==confirm){
                 setError('Your password did not match');
                 return;
             }
-            else if(password.length<6){
-                setError('Password must have at least 6 character');
-                return;
-            }
+           
 
             createUser(email, password)
         .then(result=>{
             const loggedUser=result.user;
             console.log(loggedUser);
             setUser(loggedUser);
+            const saveUser = { name:name, email: email }
+            fetch('http://localhost:5000/users', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(saveUser)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.insertedId) {
+                      
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'User created successfully.',
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        navigate(from, { replace: true });
+                    }
+                })
         })
         .catch(error=>{
             console.log(error);
             setError(error.message);
         })
+
+       
     }
     return (
         <div className="card-body">
