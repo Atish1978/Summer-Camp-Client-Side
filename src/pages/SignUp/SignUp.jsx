@@ -7,7 +7,7 @@ import Swal from 'sweetalert2'
 const SignUp = () => {
     
     const [error, setError]=useState('');
-    const [user, setUser]=useState('');
+    // const [user, setUser]=useState('');
 
     const {createUser}=useContext(AuthContext);
     const navigate = useNavigate();
@@ -48,14 +48,14 @@ const SignUp = () => {
         .then(result=>{
             const loggedUser=result.user;
             console.log(loggedUser);
-            setUser(loggedUser);
-            const saveUser = { name:name, email: email }
+            // setUser(loggedUser);
+            // const saveUser = { name:name, email: email }
             fetch('http://localhost:5000/users', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
                 },
-                body: JSON.stringify(saveUser)
+                body: JSON.stringify(loggedUser)
             })
                 .then(res => res.json())
                 .then(data => {
