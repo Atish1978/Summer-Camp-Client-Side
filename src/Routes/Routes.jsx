@@ -14,6 +14,7 @@ import AdminHome from "../pages/Dashboard/AdminHome/AdminHome";
 import MyCart from "../pages/Dashboard/MyCart/MyCart";
 import PrivateRoute from "./PrivateRoute";
 import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 
   export const router = createBrowserRouter([
@@ -40,7 +41,12 @@ import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
         {
           path: '/classes',
           element: <ClassesAll></ClassesAll>
+        },
+        {
+          path: '*',
+          element: <ErrorPage></ErrorPage>
         }
+      
        
       ]
     },
@@ -64,7 +70,6 @@ import AllUsers from "../pages/Dashboard/AllUsers/AllUsers";
           path: 'allusers',
           element: <AllUsers></AllUsers>
         }
-      
       
       ]
     }

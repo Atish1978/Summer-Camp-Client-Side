@@ -49,6 +49,7 @@ const NavBar = () => {
               </button>
             </Link>
           </li>
+          <li><Link to='/dashboard'>Dashboard</Link></li>
 
           {/* {
             user ? <>
