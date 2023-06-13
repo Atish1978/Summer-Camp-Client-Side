@@ -43,7 +43,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
           element: <ClassesAll></ClassesAll>
         },
         {
-          path: '*',
+          path: '/*',
           element: <ErrorPage></ErrorPage>
         }
       
