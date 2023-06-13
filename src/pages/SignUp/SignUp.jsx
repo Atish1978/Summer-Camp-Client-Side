@@ -9,7 +9,7 @@ const SignUp = () => {
     const [error, setError]=useState('');
     // const [user, setUser]=useState('');
 
-    const {createUser}=useContext(AuthContext);
+    const {createUser, updateUserProfile}=useContext(AuthContext);
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || "/";
 
@@ -49,28 +49,34 @@ const SignUp = () => {
             const loggedUser=result.user;
             console.log(loggedUser);
             // setUser(loggedUser);
-            // const saveUser = { name:name, email: email }
-            fetch('http://localhost:5000/users', {
-                method: 'POST',
-                headers: {
-                    'content-type': 'application/json'
-                },
-                body: JSON.stringify(loggedUser)
-            })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.insertedId) {
-                      
-                        Swal.fire({
-                            position: 'top-end',
-                            icon: 'success',
-                            title: 'User created successfully.',
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                        navigate(from, { replace: true });
-                    }
+            updateUserProfile(name, photo)
+            .then(()=>{
+
+                const saveUser = { name: loggedUser.displayName, email: loggedUser.email, photoURL: loggedUser.photo
+                }
+                fetch('http://localhost:5000/users', {
+                    method: 'POST',
+                    headers: {
+                        'content-type': 'application/json'
+                    },
+                    body: JSON.stringify(saveUser)
                 })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.insertedId) {
+                          
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                title: 'User created successfully.',
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                            navigate(from, { replace: true });
+                        }
+                    })
+            })
+          
         })
         .catch(error=>{
             console.log(error);
