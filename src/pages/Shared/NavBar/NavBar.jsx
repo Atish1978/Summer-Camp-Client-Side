@@ -4,7 +4,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import useCart from "../../../hooks/useCart";
 import { AuthContext } from "../../providers/AuthProviders";
 import logo from '../../../../src/assets/logoSchool.png'
-import useAdmin from "../../../hooks/useAdmin";
+// import useAdmin from "../../../hooks/useAdmin";
 
 
 const NavBar = () => {
