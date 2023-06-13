@@ -17,7 +17,7 @@ const ClassesAllCard = ({aclass}) => {
         console.log(aclass);
         if(user && user.email){
             const classInfo = { classId: _id, sportsImage, sportsName, availableSeats, price, email: user.email}
-            fetch('http://localhost:5000/selectedclass', {
+            fetch('https://summer-camp-server-eta.vercel.app/selectedclass', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

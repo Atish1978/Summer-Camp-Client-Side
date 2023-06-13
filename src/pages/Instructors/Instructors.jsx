@@ -8,7 +8,7 @@ const Instructors = () => {
     const [instructors, SetInstructors]=useState([]);
 
     useEffect(()=>{
-        fetch('classes.json')
+        fetch('https://summer-camp-server-eta.vercel.app/campdata')
         .then(res=>res.json())
         .then(data=>{
             SetInstructors(data);

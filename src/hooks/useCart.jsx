@@ -7,7 +7,7 @@ const useCart = () => {
     const { refetch, data: selectedclass = [] } = useQuery({
         queryKey: ['selectedclass', user?.email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/selectedclass?email=${user?.email}`)
+            const res = await fetch(`https://summer-camp-server-eta.vercel.app/selectedclass?email=${user?.email}`)
             return res.json();
         },
     })

@@ -1,9 +1,10 @@
 # assignment 12 working steps:
-* At first I have created a client site and a server site.
-* then I have created Header and Footer section.
-* then I have created a temporary fake json data file for uploading necessary data to different pages.
-then I have connected my server site with mongodb and at the same time I have worked on Firebase also.
-* Then I created Instructor page and classes page.
-* I have successfully done the select button related date loading work.
-* I was unable to complete all the requirement of this project due to my family affairs. 
-* However I have tried to complete as much as sections of this project in a short period of time.
+* My website name is Sports Summer Camp.
+* Five features of my website are 
+   * Home Page with attractive look.
+   * Default NavBar and Footer.
+   * 6 classes based on Number of students
+   * All classes page
+   * All Instructor Page with required data.
+* I have used React, mongodb, firebase and different types of Hooks.
+* Live site Link: https://sports-summer-camp.web.app
