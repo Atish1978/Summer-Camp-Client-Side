@@ -37,10 +37,7 @@ const NavBar = () => {
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/instructors'>Instructors</Link></li>
           <li><Link to='/classes'>Classes</Link></li>
-          {/* {
-            isAdmin ? <li><Link to="/dashboard/adminhome">Dashboard</Link></li> :
-              <li><Link to="/dashboard/userhome">Dashboard</Link></li>
-          } */}
+         
           <li>
             <Link to="/dashboard/mycart">
               <button className="btn">
@@ -51,15 +48,9 @@ const NavBar = () => {
           </li>
           <li><Link to='/dashboard'>Dashboard</Link></li>
 
-          {/* {
-            user ? <>
-                <button onClick={handleLogOut} className="btn btn-ghost">LogOut</button>
-            </> : <>
-                <li><Link to="/login">Login</Link></li>
-            </>
-        } */}
-
         </ul>
+
+        
       </div>
       {
         user ?
