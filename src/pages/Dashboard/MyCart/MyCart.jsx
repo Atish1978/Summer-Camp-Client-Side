@@ -1,13 +1,13 @@
-// import { Helmet } from "react-helmet-async";
+
 import useCart from "../../../hooks/useCart";
 import { FaTrashAlt } from "react-icons/fa";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
+
 
 const MyCart = () => {
     const [selectedclass, refetch] = useCart();
     console.log(selectedclass);
-  
+
     const total = selectedclass.reduce((sum, item) => item.price + sum, 0);
 
     const handleDelete = item => {
@@ -41,19 +41,15 @@ const MyCart = () => {
 
     return (
         <div className="w-full mt-12">
-            {/* <Helmet>
-                <title>Bistro Boss | My Cart</title>
-            </Helmet> */}
+
             <div className="uppercase font-semibold h-[60px] flex justify-evenly items-center">
                 <h3 className="text-3xl">Total Selected Class: {selectedclass.length}</h3>
                 <h3 className="text-3xl">Total Price: ${total}</h3>
-                <Link to="/dashboard/payment">
-                    <button className="btn btn-warning btn-sm">PAY</button>
-                </Link>
+
             </div>
             <div className="overflow-x-auto w-full">
                 <table className="table w-full">
-                    {/* head */}
+
                     <thead>
                         <tr>
                             <th>SL</th>
@@ -74,7 +70,7 @@ const MyCart = () => {
                                 </td>
                                 <td>
                                     <div className="avatar">
-                                        <div className="mask mask-squircle w-12 h-12">
+                                        <div className="rounded-full w-14 h-14">
                                             <img src={item.sportsImage} alt="Avatar Tailwind CSS Component" />
                                         </div>
                                     </div>
@@ -85,7 +81,7 @@ const MyCart = () => {
                                 <td className="ps-10">{item.availableSeats}</td>
                                 <td className="ps-6">${item.price}</td>
                                 <td>
-                                    <button onClick={() => handleDelete(item)} className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button>
+                                    <button onClick={() => handleDelete(item)} className="btn btn-ghost bg-slate-600  text-white"><FaTrashAlt></FaTrashAlt></button>
                                 </td>
                             </tr>)
                         }
